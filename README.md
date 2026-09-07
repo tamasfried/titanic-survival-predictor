@@ -13,6 +13,11 @@ This is a learning project, kept intentionally small and simple.
 
 ## 1. Train the model
 
+You can do this either locally, or in Google Colab (no local Python setup
+needed) — pick whichever you prefer.
+
+### Option A: locally
+
 ```bash
 cd training
 python -m venv .venv
@@ -36,8 +41,16 @@ Accuracy: 0.816
 Saved trained model to .../app/backend/model/titanic_model.joblib
 ```
 
-You need to run this step once before the backend will work, since the
-backend loads that saved model file.
+### Option B: Google Colab
+
+Open `training/titanic_colab.ipynb` in Colab (from Colab: File → Open
+notebook → GitHub tab → paste this repo's URL), then run each cell in
+order (Shift+Enter). The last cell downloads a `titanic_model.joblib` file
+to your computer — move that file into `app/backend/model/titanic_model.joblib`
+in your local copy of this repo.
+
+Either way, you need to do this once before the backend will work, since
+the backend loads that saved model file from disk.
 
 ## 2. Start the backend API
 
